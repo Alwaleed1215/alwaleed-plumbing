@@ -76,6 +76,15 @@
             border-color: #60a5fa;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
+
+        /* أنيميشن أيقونة الهيدر الجديدة */
+        @keyframes icon-wiggle {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(15deg) scale(1.1); }
+        }
+        .animate-icon {
+            animation: icon-wiggle 2.5s ease-in-out infinite;
+        }
     </style>
 </head>
 <body class="pb-24">
@@ -93,9 +102,13 @@
         </a>
     </div>
 
-    <header class="bg-white/90 backdrop-blur-md fixed top-0 w-full z-40 py-3 px-4 shadow-sm flex justify-between items-center transition-all duration-300">
-        <div class="font-bold text-blue-900 text-lg flex items-center gap-2">
-            الوليد لخدمات السباكة <i class="fas fa-wrench text-blue-500 text-sm"></i>
+    <header class="bg-white/90 backdrop-blur-md fixed top-0 w-full z-40 py-2.5 px-4 shadow-sm flex justify-between items-center transition-all duration-300">
+        <div class="font-bold text-blue-900 text-lg flex items-center gap-2.5">
+            <div class="relative w-9 h-9 flex items-center justify-center bg-gradient-to-br from-blue-400 to-brandBlue rounded-full shadow-[0_2px_8px_rgba(30,58,138,0.25)]">
+                <span class="absolute inset-0 rounded-full border-2 border-blue-300 animate-ping opacity-30"></span>
+                <i class="fas fa-wrench text-white text-sm animate-icon z-10"></i>
+            </div>
+            <span>الوليد لخدمات السباكة</span>
         </div>
     </header>
 
