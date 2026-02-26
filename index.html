@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوليد لخدمات السباكة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Cairo', sans-serif; background-color: #f8fafc; }
+        /* تصميم القسم العلوي المائل */
+        .hero-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
+            border-bottom-left-radius: 3rem;
+            border-bottom-right-radius: 3rem;
+        }
+    </style>
+</head>
+<body class="pb-24">
+
+    <div class="hero-section text-white px-6 py-12 text-center shadow-lg relative overflow-hidden">
+        <div class="mb-4 inline-block bg-white/20 px-4 py-1 rounded-full text-sm backdrop-blur-sm">
+            <i class="fas fa-check-circle text-teal-300 ml-1"></i> فني سباكة معتمد في الرياض
+        </div>
+        <h1 class="text-4xl font-bold mb-4 leading-tight">الوليد لخدمات السباكة<br><span class="text-teal-400">والصيانة الشاملة</span></h1>
+        <p class="text-gray-200 mb-8 text-sm">خبرة تضمن لك راحة البال. حلول هندسية متطورة لتأسيس وصيانة شبكات المياه والصرف بأحدث التقنيات.</p>
+        
+        <div class="flex flex-col gap-3">
+            <a href="https://wa.me/966510721671" class="bg-teal-400 text-slate-900 font-bold py-3 rounded-full shadow-lg hover:bg-teal-300 transition flex justify-center items-center gap-2">
+                <i class="fab fa-whatsapp text-xl"></i> اطلب فني الآن
+            </a>
+            <a href="#services" class="bg-white/10 border border-white/30 text-white font-bold py-3 rounded-full hover:bg-white/20 transition backdrop-blur-sm">
+                مشاهدة خدماتنا
+            </a>
+        </div>
+        
+        <div class="flex justify-center gap-4 mt-8 text-xs text-gray-300">
+            <span><i class="fas fa-clock ml-1"></i> طوارئ 24/7</span>
+            <span><i class="fas fa-shield-alt ml-1"></i> ضمان معتمد</span>
+        </div>
+    </div>
+
+    <div id="services" class="px-4 py-10 mt-4">
+        <h2 class="text-2xl font-bold text-center text-slate-800 mb-6 border-b-2 border-teal-400 pb-2 inline-block mx-auto flex justify-center">خدماتنا الاحترافية</h2>
+        
+        <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white p-4 rounded-2xl shadow-sm border border-teal-100 text-center flex flex-col items-center gap-3">
+                <div class="w-12 h-12 bg-teal-50 rounded-full flex items-center justify-center text-teal-500 text-xl">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3 class="font-bold text-slate-700 text-sm">تأسيس سباكة للفلل والمنازل</h3>
+            </div>
+            
+            <div class="bg-white p-4 rounded-2xl shadow-sm border border-teal-100 text-center flex flex-col items-center gap-3">
+                <div class="w-12 h-12 bg-teal-50 rounded-full flex items-center justify-center text-teal-500 text-xl">
+                    <i class="fas fa-faucet"></i>
+                </div>
+                <h3 class="font-bold text-slate-700 text-sm">تأسيس وتشطيب حمامات</h3>
+            </div>
+
+            <div class="bg-white p-4 rounded-2xl shadow-sm border border-teal-100 text-center flex flex-col items-center gap-3">
+                <div class="w-12 h-12 bg-teal-50 rounded-full flex items-center justify-center text-teal-500 text-xl">
+                    <i class="fas fa-water"></i>
+                </div>
+                <h3 class="font-bold text-slate-700 text-sm">تسليك المجاري والبالوعات</h3>
+            </div>
+
+            <div class="bg-white p-4 rounded-2xl shadow-sm border border-teal-100 text-center flex flex-col items-center gap-3">
+                <div class="w-12 h-12 bg-teal-50 rounded-full flex items-center justify-center text-teal-500 text-xl">
+                    <i class="fas fa-search-location"></i>
+                </div>
+                <h3 class="font-bold text-slate-700 text-sm">كشف تسربات المياه</h3>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/966510721671" class="fixed bottom-24 left-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-xl z-50 hover:bg-green-600 transition">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <nav class="fixed bottom-0 w-full bg-white border-t border-gray-200 flex justify-around items-center py-3 px-2 z-40 pb-5 text-gray-500 text-xs">
+        <a href="#" class="flex flex-col items-center gap-1 text-teal-600 font-bold">
+            <i class="fas fa-home text-lg"></i>
+            <span>الرئيسية</span>
+        </a>
+        <a href="#services" class="flex flex-col items-center gap-1 hover:text-teal-600 transition">
+            <i class="fas fa-briefcase text-lg"></i>
+            <span>خدماتنا</span>
+        </a>
+        <a href="#" class="flex flex-col items-center gap-1 hover:text-teal-600 transition">
+            <i class="fas fa-star text-lg"></i>
+            <span>مميزاتنا</span>
+        </a>
+        <a href="https://wa.me/966510721671" class="flex flex-col items-center gap-1 hover:text-teal-600 transition">
+            <i class="fas fa-comment-dots text-lg"></i>
+            <span>تواصل معنا</span>
+        </a>
+    </nav>
+
+</body>
+</html>
+
