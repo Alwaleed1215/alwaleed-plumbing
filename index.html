@@ -40,20 +40,33 @@
             100% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
         }
         
-        /* التمويجة أسفل الهيرو */
+        /* التمويجة أسفل الهيرو - تم تحديث الشكل ليكون انسيابياً ومتناسقاً */
         .custom-shape-divider-bottom {
             position: absolute; bottom: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0; transform: rotate(180deg);
         }
         .custom-shape-divider-bottom svg { position: relative; display: block; width: calc(100% + 1.3px); height: 60px; }
         .custom-shape-divider-bottom .shape-fill { fill: #f8fafc; }
 
-        /* أنيميشن الظهور عند النزول (Scroll Reveal) */
+        /* أنيميشن الظهور عند النزول */
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
         
-        /* تأثيرات الأزرار والكروت */
+        /* تأثيرات الأزرار والكروت العامة */
         .glass-btn { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); }
-        .card-shadow { box-shadow: 0 4px 20px rgba(0,0,0,0.03); border: 1px solid #e2e8f0; }
+        
+        /* تأثير الضغط التفاعلي لكروت الخدمات */
+        .interactive-card {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid #e0e7ff; 
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+        .interactive-card:active {
+            transform: scale(0.95);
+            background-color: #f0fdfa;
+            border-color: #60a5fa;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
     </style>
 </head>
 <body class="pb-24">
@@ -112,7 +125,7 @@
 
         <div class="custom-shape-divider-bottom">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,130.83,121.5,193.39,109.8,236.4,101.6,279.4,80.1,321.39,56.44Z" class="shape-fill"></path>
+                <path d="M0 48 L80 53.3 C160 59 320 69 480 64 C640 59 800 37 960 26.7 C1120 16 1280 16 1360 16 H1440 V120 H1360 C1280 120 1120 120 960 120 C800 120 640 120 480 120 C320 120 160 120 80 120 H0 V48 Z" class="shape-fill"></path>
             </svg>
         </div>
     </section>
@@ -125,52 +138,52 @@
         </div>
 
         <div class="grid grid-cols-2 gap-3">
-            <div class="bg-white p-4 rounded-xl card-shadow text-center reveal flex flex-col items-center">
-                <div class="text-blue-500 text-2xl mb-2"><i class="fas fa-wrench"></i></div>
-                <h4 class="font-bold text-xs text-brandBlue mb-1">صيانة وتصليح السباكة</h4>
-                <p class="text-[9px] text-gray-500">صيانة منزلية شاملة على مدار الساعة.</p>
+            <div class="bg-white p-4 rounded-xl text-center reveal flex flex-col items-center interactive-card">
+                <div class="text-blue-500 text-2xl mb-3 bg-blue-50 w-12 h-12 flex items-center justify-center rounded-full"><i class="fas fa-wrench"></i></div>
+                <h4 class="font-bold text-xs text-brandBlue mb-2">صيانة وتصليح السباكة</h4>
+                <p class="text-[9px] text-gray-500 leading-relaxed text-justify">نقدم خدمات صيانة منزلية شاملة وفورية على مدار الساعة لمعالجة أعطال السباكة. فريقنا مجهز بأحدث الأدوات لضمان إصلاح دقيق وفعال للمواسير والمحابس والأنظمة المائية، مع ضمان جودة العمل لراحتك التامة.</p>
             </div>
-            <div class="bg-white p-4 rounded-xl card-shadow text-center reveal flex flex-col items-center">
-                <div class="text-blue-500 text-2xl mb-2"><i class="fas fa-tools"></i></div>
-                <h4 class="font-bold text-xs text-brandBlue mb-1">تأسيس سباكة الفلل</h4>
-                <p class="text-[9px] text-gray-500">تأسيس شبكات احترافية للفلل والمنازل.</p>
+            <div class="bg-white p-4 rounded-xl text-center reveal flex flex-col items-center interactive-card">
+                <div class="text-blue-500 text-2xl mb-3 bg-blue-50 w-12 h-12 flex items-center justify-center rounded-full"><i class="fas fa-tools"></i></div>
+                <h4 class="font-bold text-xs text-brandBlue mb-2">تأسيس سباكة الفلل</h4>
+                <p class="text-[9px] text-gray-500 leading-relaxed text-justify">تنفيذ وتأسيس شبكات السباكة المتكاملة للفلل والمجمعات السكنية وفقاً لأعلى المعايير الهندسية والمخططات المعتمدة. نستخدم أفضل الخامات والتقنيات الحديثة لضمان عمر افتراضي طويل وخلو تام من المشاكل مستقبلاً.</p>
             </div>
-            <div class="bg-white p-4 rounded-xl card-shadow text-center reveal flex flex-col items-center">
-                <div class="text-blue-500 text-2xl mb-2"><i class="fas fa-utensils"></i></div>
-                <h4 class="font-bold text-xs text-brandBlue mb-1">تأسيس وتشطيب مطابخ</h4>
-                <p class="text-[9px] text-gray-500">تنفيذ شبكات السباكة للمطابخ الحديثة.</p>
+            <div class="bg-white p-4 rounded-xl text-center reveal flex flex-col items-center interactive-card">
+                <div class="text-blue-500 text-2xl mb-3 bg-blue-50 w-12 h-12 flex items-center justify-center rounded-full"><i class="fas fa-utensils"></i></div>
+                <h4 class="font-bold text-xs text-brandBlue mb-2">تأسيس وتشطيب مطابخ</h4>
+                <p class="text-[9px] text-gray-500 leading-relaxed text-justify">نبتكر حلولاً عصرية لتأسيس شبكات السباكة بالمطابخ. نهتم بأدق التفاصيل لضمان توزيع مثالي لخطوط المياه والصرف، مع مراعاة دقيقة لأماكن الأجهزة والمغاسل لنوفر لك مطبخاً عملياً، آمناً، وخالياً من التسريبات.</p>
             </div>
-            <div class="bg-white p-4 rounded-xl card-shadow text-center reveal flex flex-col items-center">
-                <div class="text-blue-500 text-2xl mb-2"><i class="fas fa-bath"></i></div>
-                <h4 class="font-bold text-xs text-brandBlue mb-1">تأسيس وتشطيب حمامات</h4>
-                <p class="text-[9px] text-gray-500">متخصصون في تشطيب الحمامات المودرن.</p>
+            <div class="bg-white p-4 rounded-xl text-center reveal flex flex-col items-center interactive-card">
+                <div class="text-blue-500 text-2xl mb-3 bg-blue-50 w-12 h-12 flex items-center justify-center rounded-full"><i class="fas fa-bath"></i></div>
+                <h4 class="font-bold text-xs text-brandBlue mb-2">تأسيس وتشطيب حمامات</h4>
+                <p class="text-[9px] text-gray-500 leading-relaxed text-justify">متخصصون في تشطيب الحمامات المودرن، وتأسيس الشبكات المخفية، وتركيب الكراسي المعلقة والخلاطات الذكية. نضمن لك عزل مائي احترافي وتوزيع هندسي دقيق يجمع بين الفخامة في المظهر والكفاءة العالية في الاستخدام.</p>
             </div>
-            <div class="bg-white p-4 rounded-xl card-shadow text-center reveal flex flex-col items-center">
-                <div class="text-blue-500 text-2xl mb-2"><i class="fas fa-search"></i></div>
-                <h4 class="font-bold text-xs text-brandBlue mb-1">كشف وحل تسريبات</h4>
-                <p class="text-[9px] text-gray-500">فحص إلكتروني دقيق بدون تكسير.</p>
+            <div class="bg-white p-4 rounded-xl text-center reveal flex flex-col items-center interactive-card">
+                <div class="text-blue-500 text-2xl mb-3 bg-blue-50 w-12 h-12 flex items-center justify-center rounded-full"><i class="fas fa-search"></i></div>
+                <h4 class="font-bold text-xs text-brandBlue mb-2">كشف وحل التسربات</h4>
+                <p class="text-[9px] text-gray-500 leading-relaxed text-justify">نعتمد على أجهزة الفحص الإلكتروني الدقيقة لكشف تسربات المياه خلف الجدران وتحت البلاط بدون أي تكسير. نقدم حلولاً جذرية وسريعة لإيقاف الهدر المائي وحماية البنية التحتية لمنزلك من التلف مع تقارير معتمدة.</p>
             </div>
-            <div class="bg-white p-4 rounded-xl card-shadow text-center reveal flex flex-col items-center">
-                <div class="text-blue-500 text-2xl mb-2"><i class="fas fa-water"></i></div>
-                <h4 class="font-bold text-xs text-brandBlue mb-1">تسليك المجاري</h4>
-                <p class="text-[9px] text-gray-500">حلول فورية لانسداد البالوعات بأحدث الأجهزة.</p>
+            <div class="bg-white p-4 rounded-xl text-center reveal flex flex-col items-center interactive-card">
+                <div class="text-blue-500 text-2xl mb-3 bg-blue-50 w-12 h-12 flex items-center justify-center rounded-full"><i class="fas fa-water"></i></div>
+                <h4 class="font-bold text-xs text-brandBlue mb-2">تسليك المجاري والصرف</h4>
+                <p class="text-[9px] text-gray-500 leading-relaxed text-justify">نقدم حلولاً فورية وفعالة لمعالجة انسداد البالوعات وشبكات الصرف الصحي باستخدام أحدث أجهزة الضغط. نضمن لك تنظيفاً شاملاً وتعقيماً للخطوط لمنع الروائح الكريهة وضمان انسيابية المياه بشكل مثالي وطبيعي.</p>
             </div>
         </div>
     </section>
 
     <section class="px-5 py-6">
         <div class="flex flex-col gap-3">
-            <div class="bg-white p-4 rounded-xl card-shadow flex flex-col items-center text-center reveal">
+            <div class="bg-white p-4 rounded-xl interactive-card flex flex-col items-center text-center reveal">
                 <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-blue-500 mb-2"><i class="far fa-clock text-xl"></i></div>
                 <h4 class="font-bold text-sm text-brandBlue">سرعة في الاستجابة</h4>
                 <p class="text-[10px] text-gray-500 mt-1">نصلك فوراً لحل أعطال السباكة في كافة أحياء الرياض.</p>
             </div>
-            <div class="bg-white p-4 rounded-xl card-shadow flex flex-col items-center text-center reveal">
+            <div class="bg-white p-4 rounded-xl interactive-card flex flex-col items-center text-center reveal">
                 <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-blue-500 mb-2"><i class="fas fa-hand-holding-usd text-xl"></i></div>
                 <h4 class="font-bold text-sm text-brandBlue">أسعار تنافسية</h4>
                 <p class="text-[10px] text-gray-500 mt-1">أفضل جودة مقابل أقل سعر مع شفافية تامة.</p>
             </div>
-            <div class="bg-white p-4 rounded-xl card-shadow flex flex-col items-center text-center reveal">
+            <div class="bg-white p-4 rounded-xl interactive-card flex flex-col items-center text-center reveal">
                 <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-blue-500 mb-2"><i class="fas fa-shield-alt text-xl"></i></div>
                 <h4 class="font-bold text-sm text-brandBlue">ضمان حقيقي</h4>
                 <p class="text-[10px] text-gray-500 mt-1">نضمن جودة أعمالنا لفترات طويلة لضمان راحتكم.</p>
@@ -180,7 +193,7 @@
 
     <section class="px-5 py-8 reveal">
         <div class="bg-brandBlue rounded-2xl p-6 text-center text-white shadow-xl bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
-            <h3 class="text-2xl font-bold mb-2">أفضل فني سباكة<br>بين يديك الآن</h3>
+            <h3 class="text-2xl font-bold mb-2">أفضل فني سباكة<br>ين يديك الآن</h3>
             <p class="text-[10px] text-blue-200 mb-6">لا تدع مشاكل السباكة تؤرقك، نحن هنا لنقدم لك الحل الأمثل.</p>
             <a href="https://wa.me/966510721671" class="bg-white text-brandBlue font-bold py-3 px-8 rounded-full flex items-center justify-center gap-2 mx-auto max-w-fit hover:bg-gray-100 transition">
                 اتصل بنا الآن <i class="fas fa-arrow-left mt-1"></i>
@@ -231,7 +244,7 @@
             }, 2500);
         });
 
-        // أنيميشن الظهور عند التمرير (Scroll Reveal)
+        // أنيميشن الظهور عند التمرير
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
@@ -244,7 +257,7 @@
             }
         }
         window.addEventListener("scroll", reveal);
-        reveal(); // لتشغيلها مباشرة على العناصر الظاهرة بالشاشة
+        reveal();
     </script>
 </body>
 </html>
