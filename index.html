@@ -14,9 +14,11 @@
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://alwaleed.services/">
-    <meta property="og:title" content="الوليد لخدمات السباكة | فني معتمد بالرياض">
+    <meta property="og:title" content="الوليد لخدمات السباكة | أفضل فني معتمد بالرياض">
     <meta property="og:description" content="حلول احترافية لكافة أعطال السباكة، كشف تسربات، وتأسيس فلل. تواصل معنا الآن لخدمة سريعة ومضمونة.">
-    <meta property="og:image" content="https://imgg.io/images/2026/02/26/ce05cd084a92ed982ac1f5292b0e627f.png">
+    <meta property="og:image" itemprop="image" content="https://imgg.io/images/2026/02/26/ce05cd084a92ed982ac1f5292b0e627f.png">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="800">
 
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -79,8 +81,8 @@
 <body class="pb-24">
 
     <div id="splash-screen">
-        <div class="w-24 h-24 rounded-full flex items-center justify-center mb-6 pulse-circle bg-white shadow-lg overflow-hidden border-2 border-blue-100">
-            <img src="https://imgg.io/images/2026/02/26/ce05cd084a92ed982ac1f5292b0e627f.png" alt="شعار الوليد" class="w-20 h-20 object-contain">
+        <div class="w-24 h-24 bg-blue-500 rounded-full flex items-center justify-center text-white text-4xl mb-6 pulse-circle">
+            <i class="fas fa-wrench"></i>
         </div>
         <h1 class="text-xl font-bold text-blue-900 mb-2">الوليد لخدمات السباكة يرحب بكم</h1>
         <div class="flex items-center gap-2 text-gray-500 text-sm">
@@ -227,4 +229,42 @@
     </a>
 
     <nav class="fixed bottom-0 w-full bg-white border-t border-gray-200 flex justify-around items-center py-2 px-2 z-50 text-gray-400 text-[10px] font-bold pb-3">
-        <a href="#" class="flex flex-col items
+        <a href="#" class="flex flex-col items-center gap-1 text-blue-600">
+            <i class="fas fa-home text-xl mb-0.5"></i> الرئيسية
+        </a>
+        <a href="#services" class="flex flex-col items-center gap-1 hover:text-blue-600 transition">
+            <i class="fas fa-tools text-xl mb-0.5"></i> خدماتنا
+        </a>
+        <a href="#" class="flex flex-col items-center gap-1 hover:text-blue-600 transition">
+            <i class="fas fa-shield-alt text-xl mb-0.5"></i> مميزاتنا
+        </a>
+        <a href="https://wa.me/966510721671" class="flex flex-col items-center gap-1 hover:text-blue-600 transition">
+            <i class="fas fa-comment-dots text-xl mb-0.5"></i> تواصل معنا
+        </a>
+    </nav>
+
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const splash = document.getElementById('splash-screen');
+                splash.style.opacity = '0';
+                splash.style.visibility = 'hidden';
+            }, 2500);
+        });
+
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 50;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
+</html>
