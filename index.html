@@ -3,7 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الوليد لخدمات السباكة</title>
+    
+    <title>الوليد لخدمات السباكة | صيانة وتأسيس بالرياض</title>
+    <meta name="description" content="الوليد لخدمات السباكة بالرياض. نقدم خدمات صيانة وتأسيس السباكة، كشف وحل التسربات، تسليك المجاري، وتشطيب الحمامات بضمان حقيقي وسرعة استجابة.">
+    <meta name="keywords" content="سباك بالرياض, فني سباكة, كشف تسربات المياه, تسليك مجاري, تأسيس سباكة فلل, صيانة سباكة, تشطيب حمامات, رقم سباك بالرياض">
+    <meta name="author" content="المهندس إسلام الشيخ">
+    
+    <link rel="icon" type="image/png" href="https://imgg.io/images/2026/02/26/ce05cd084a92ed982ac1f5292b0e627f.png">
+    <link rel="apple-touch-icon" href="https://imgg.io/images/2026/02/26/ce05cd084a92ed982ac1f5292b0e627f.png">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alwaleed.services/">
+    <meta property="og:title" content="الوليد لخدمات السباكة | فني معتمد بالرياض">
+    <meta property="og:description" content="حلول احترافية لكافة أعطال السباكة، كشف تسربات، وتأسيس فلل. تواصل معنا الآن لخدمة سريعة ومضمونة.">
+    <meta property="og:image" content="https://imgg.io/images/2026/02/26/ce05cd084a92ed982ac1f5292b0e627f.png">
+
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -25,36 +39,29 @@
     <style>
         body { font-family: 'Cairo', sans-serif; background-color: #f8fafc; overflow-x: hidden; }
         
-        /* تأثيرات صفحة التحميل */
         #splash-screen {
             position: fixed; inset: 0; background: white; z-index: 9999;
             display: flex; flex-direction: column; align-items: center; justify-content: center;
             transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
         }
-        .pulse-circle {
-            animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-        }
+        .pulse-circle { animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
         @keyframes pulse-ring {
             0% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
             70% { transform: scale(1); box-shadow: 0 0 0 20px rgba(59, 130, 246, 0); }
             100% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
         }
         
-        /* التمويجة أسفل الهيرو - تم تحديث الشكل ليكون انسيابياً ومتناسقاً */
         .custom-shape-divider-bottom {
             position: absolute; bottom: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0; transform: rotate(180deg);
         }
         .custom-shape-divider-bottom svg { position: relative; display: block; width: calc(100% + 1.3px); height: 60px; }
         .custom-shape-divider-bottom .shape-fill { fill: #f8fafc; }
 
-        /* أنيميشن الظهور عند النزول */
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
         
-        /* تأثيرات الأزرار والكروت العامة */
         .glass-btn { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); }
         
-        /* تأثير الضغط التفاعلي لكروت الخدمات */
         .interactive-card {
             box-shadow: 0 4px 15px rgba(0,0,0,0.02);
             border: 1px solid #e0e7ff; 
@@ -72,8 +79,8 @@
 <body class="pb-24">
 
     <div id="splash-screen">
-        <div class="w-24 h-24 bg-blue-500 rounded-full flex items-center justify-center text-white text-4xl mb-6 pulse-circle">
-            <i class="fas fa-wrench"></i>
+        <div class="w-24 h-24 rounded-full flex items-center justify-center mb-6 pulse-circle bg-white shadow-lg overflow-hidden border-2 border-blue-100">
+            <img src="https://imgg.io/images/2026/02/26/ce05cd084a92ed982ac1f5292b0e627f.png" alt="شعار الوليد" class="w-20 h-20 object-contain">
         </div>
         <h1 class="text-xl font-bold text-blue-900 mb-2">الوليد لخدمات السباكة يرحب بكم</h1>
         <div class="flex items-center gap-2 text-gray-500 text-sm">
@@ -193,7 +200,7 @@
 
     <section class="px-5 py-8 reveal">
         <div class="bg-brandBlue rounded-2xl p-6 text-center text-white shadow-xl bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
-            <h3 class="text-2xl font-bold mb-2">أفضل فني سباكة<br>ين يديك الآن</h3>
+            <h3 class="text-2xl font-bold mb-2">أفضل فني سباكة<br>بين يديك الآن</h3>
             <p class="text-[10px] text-blue-200 mb-6">لا تدع مشاكل السباكة تؤرقك، نحن هنا لنقدم لك الحل الأمثل.</p>
             <a href="https://wa.me/966510721671" class="bg-white text-brandBlue font-bold py-3 px-8 rounded-full flex items-center justify-center gap-2 mx-auto max-w-fit hover:bg-gray-100 transition">
                 اتصل بنا الآن <i class="fas fa-arrow-left mt-1"></i>
@@ -220,44 +227,4 @@
     </a>
 
     <nav class="fixed bottom-0 w-full bg-white border-t border-gray-200 flex justify-around items-center py-2 px-2 z-50 text-gray-400 text-[10px] font-bold pb-3">
-        <a href="#" class="flex flex-col items-center gap-1 text-blue-600">
-            <i class="fas fa-home text-xl mb-0.5"></i> الرئيسية
-        </a>
-        <a href="#services" class="flex flex-col items-center gap-1 hover:text-blue-600 transition">
-            <i class="fas fa-tools text-xl mb-0.5"></i> خدماتنا
-        </a>
-        <a href="#" class="flex flex-col items-center gap-1 hover:text-blue-600 transition">
-            <i class="fas fa-shield-alt text-xl mb-0.5"></i> مميزاتنا
-        </a>
-        <a href="https://wa.me/966510721671" class="flex flex-col items-center gap-1 hover:text-blue-600 transition">
-            <i class="fas fa-comment-dots text-xl mb-0.5"></i> تواصل معنا
-        </a>
-    </nav>
-
-    <script>
-        // إخفاء صفحة التحميل بعد ثانيتين ونصف
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                const splash = document.getElementById('splash-screen');
-                splash.style.opacity = '0';
-                splash.style.visibility = 'hidden';
-            }, 2500);
-        });
-
-        // أنيميشن الظهور عند التمرير
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 50;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
-        reveal();
-    </script>
-</body>
-</html>
+        <a href="#" class="flex flex-col items
