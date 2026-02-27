@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسليك مجاري بالرياض | تسليك بلاعات وصرف صحي | الوليد للسباكة</title>
+    <meta name="description" content="افضل شركة تسليك مجاري بالرياض. حلول فورية لانسداد البلاعات والمواسير باستخدام أجهزة الضغط والنيتروجين. سباك تسليك مجاري متاح 24 ساعة لخدمتك.">
+    
+    <link rel="icon" type="image/png" href="https://imgg.io/images/2026/02/26/ce05cd084a92ed982ac1f5292b0e627f.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Cairo', 'sans-serif'] },
+                    colors: { brandBlue: '#1e3a8a', brandTeal: '#5eead4' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Cairo', sans-serif; background-color: #f8fafc; }
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="pb-24">
+
+    <header class="bg-white/95 fixed top-0 w-full z-40 py-3 px-4 shadow-sm flex items-center justify-between border-b">
+        <a href="index.html" class="font-bold text-blue-900 flex items-center gap-2">
+            <i class="fas fa-arrow-right text-blue-600 ml-2"></i> الوليد للسباكة
+        </a>
+    </header>
+
+    <section class="relative pt-24 pb-16 px-6 text-center bg-blue-900 text-white">
+        <h1 class="text-3xl font-extrabold mb-4">تسليك المجاري وانسداد البلاعات</h1>
+        <p class="text-xs text-blue-100 leading-relaxed">حلول جذرية فورية لضمان انسيابية الصرف الصحي بمنزلك</p>
+    </section>
+
+    <section class="px-6 py-12 bg-white">
+        <div class="max-w-3xl mx-auto reveal active text-[11px] text-gray-600 leading-8 text-justify space-y-6">
+            <h2 class="text-xl font-bold text-blue-900 mb-6 border-r-4 border-blue-600 pr-3">انسداد المجاري؟ لا تقلق، الحل لدينا</h2>
+            <p>تعتبر مشكلة انسداد المجاري والبلاعات من أكثر المشاكل المزعجة التي قد تواجه أي صاحب منزل في الرياض، لما تسببه من روائح كريهة، وتعطيل للحياة اليومية، وتهديد لسلامة المبنى والصحة العامة. في الوليد لخدمات السباكة، نحن متخصصون في تقديم حلول "تأسيس صرف صحي" وصيانة فائقة السرعة باستخدام أحدث المعدات العالمية. نحن لا نقوم فقط بتسليك الانسداد السطحي، بل نبحث عن مسببات المشكلة في عمق الشبكة ونقضي عليها تماماً لضمان عدم تكرار الانسداد.</p>
+            <p>نعتمد في عملنا على تقنيات "تسليك بلاعات" متطورة مثل أجهزة الضغط المائي العالي، والنيتروجين، وسوست التنظيف الكهربائية التي يمكنها اختراق أقوى التراكمات الدهنية والأجسام الغريبة داخل المواسير. فريقنا مدرب على التعامل مع كافة أنواع غرف التفتيش والردادات، ونحرص على تنظيف وتعقيم المنطقة بالكامل بعد الانتهاء من العمل لإزالة أي آثار للروائح المزعجة أو البكتيريا.</p>
+            <p>لماذا تختار الوليد؟ لأننا "سباك صرف صحي" محترف ندرك أن الوقت عامل حاسم، لذا نوفر فرق طوارئ مجهزة في أحياء شمال الرياض (حي النفل، حي المصيف) للوصول إليك في أسرع وقت ممكن. نحن نقدم خدماتنا للمنازل، الفلل، والمباني التجارية، مع تقديم نصائح وقائية هامة لعملائنا حول كيفية الحفاظ على سلامة شبكة الصرف وتجنب إلقاء المواد التي تسبب الانسدادات المتكررة. أسعارنا تنافسية وخدمتنا مضمونة لتنعم بمنزل نظيف وصرف مثالي.</p>
+        </div>
+    </section>
+
+    <nav class="fixed bottom-0 w-full bg-white border-t border-gray-200 flex justify-around items-center py-2.5 z-50 text-[10px] font-bold pb-4 shadow-lg">
+        <a href="index.html" class="flex flex-col items-center gap-1 text-gray-400"><i class="fas fa-home text-xl"></i> الرئيسية</a>
+        <a href="https://wa.me/966510721671" class="flex flex-col items-center gap-1 text-green-600"><i class="fab fa-whatsapp text-xl"></i> اطلب فني تسليك</a>
+    </nav>
+
+    <script>
+        function reveal() {
+            document.querySelectorAll(".reveal").forEach(el => { if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add("active"); });
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
+</html>
+
