@@ -6,7 +6,7 @@
     
     <title>الوليد لخدمات السباكة | سباك الرياض | تأسيس وصيانة محترفة</title>
     <meta name="description" content="سباك محترف بالرياض لصيانة وتأسيس السباكة. متخصصون في تأسيس سباكة الفلل، تسليك مجاري، وكشف تسربات المياه بدون تكسير في شمال الرياض وحي النفل والمصيف.">
-    <meta name="keywords" content="سباك, سباك شمال الرياض, سباك حي النفل, سباك حي المصيف, سباك محترف, سباك الرياض, سباك قريب مني, سباك تأسيس, تأسيس سباكة الفلل, تسليك بلاعات, تسليك مجاري, تأسيس صرف صحي, سباك صرف صحي">
+    <meta name="keywords" content="سباك, سباك شمال الرياض, سباك حي النفل, سباك حي المصيف, سباك محترف, سباك الرياض, سباك قريب مني, سباك تأسيس, تأسيس سباكة الفلل, تسليك بلاعات, تسليك مجاري, تأسيس صرف صحي, سباك صرف صحي, تأسيس سباكة المطابخ">
     
     <link rel="icon" type="image/png" href="https://imgg.io/images/2026/02/26/ce05cd084a92ed982ac1f5292b0e627f.png">
     <link rel="apple-touch-icon" href="https://imgg.io/images/2026/02/26/ce05cd084a92ed982ac1f5292b0e627f.png">
@@ -34,9 +34,32 @@
         .pulse-circle { animation: pulse-ring 2s infinite; }
         @keyframes pulse-ring { 0% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(30, 58, 138, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 20px rgba(30, 58, 138, 0); } 100% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(30, 58, 138, 0); } }
 
+        /* ستايل التوقيع الذهبي الملكي المطور (المهندس إسلام الشيخ) */
+        .designer-signature {
+            color: #d4af37;
+            border: 1.5px solid #d4af37;
+            padding: 5px 15px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 800;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(90deg, #d4af37, #f3e5ab, #d4af37);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 2.5s linear infinite;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+            transition: all 0.3s ease;
+        }
+        @keyframes shine { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
+        .designer-signature:hover { transform: scale(1.05); box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); }
+
         .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
-        .interactive-card { transition: all 0.2s; border: 1px solid #f1f5f9; }
+        .interactive-card { transition: all 0.2s; border: 1px solid #f1f5f9; cursor: pointer; }
         .interactive-card:active { transform: scale(0.96); background-color: #f0fdfa; }
         @keyframes icon-wiggle { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(15deg) scale(1.1); } }
         .animate-icon { animation: icon-wiggle 2s infinite; }
@@ -55,8 +78,11 @@
             <i class="fas fa-wrench"></i>
         </div>
         <h1 class="text-xl font-bold text-blue-900 mb-2 text-center">الوليد لخدمات السباكة يرحب بكم</h1>
-        <div class="flex items-center gap-2 text-gray-400 text-sm mb-10"><i class="fas fa-circle-notch fa-spin"></i> جاري التحميل...</div>
-        <p class="absolute bottom-10 text-[11px] font-bold text-gray-400">تم التصميم بواسطة المهندس إسلام الشيخ</p>
+        <div class="flex items-center gap-2 text-gray-400 text-sm mb-12"><i class="fas fa-circle-notch fa-spin"></i> جاري التحميل...</div>
+        
+        <a href="https://wa.me/966510721671" class="designer-signature absolute bottom-12">
+            تم التصميم بواسطة المهندس إسلام الشيخ
+        </a>
     </div>
 
     <header class="bg-white/95 fixed top-0 w-full z-40 py-3 px-4 shadow-sm flex items-center justify-between border-b">
@@ -81,53 +107,53 @@
         <div class="grid grid-cols-2 gap-3">
             <a href="plumbing-maintenance.html" class="bg-white p-4 rounded-xl text-center reveal active interactive-card block shadow-sm">
                 <i class="fas fa-wrench text-blue-500 text-2xl mb-2"></i>
-                <h4 class="font-bold text-[11px] text-blue-900 mb-2">صيانة السباكة</h4>
-                <p class="text-[9px] text-gray-500">إصلاح فوري لكافة أعطال السباكة المنزلية.</p>
+                <h4 class="font-bold text-[10px] text-blue-900 mb-1 leading-tight">صيانة السباكة</h4>
+                <p class="text-[8px] text-gray-500">إصلاح فوري للأعطال.</p>
             </a>
             <a href="foundation.html" class="bg-white p-4 rounded-xl text-center reveal active interactive-card block shadow-sm">
                 <i class="fas fa-tools text-blue-500 text-2xl mb-2"></i>
-                <h4 class="font-bold text-[11px] text-blue-900 mb-2">تأسيس السباكة</h4>
-                <p class="text-[9px] text-gray-500">تأسيس الفلل والمباني وفق الكود السعودي.</p>
+                <h4 class="font-bold text-[10px] text-blue-900 mb-1 leading-tight">تأسيس السباكة</h4>
+                <p class="text-[8px] text-gray-500">تأسيس فلل ومباني.</p>
             </a>
             <a href="bathrooms.html" class="bg-white p-4 rounded-xl text-center reveal active interactive-card block shadow-sm">
                 <i class="fas fa-bath text-blue-500 text-2xl mb-2"></i>
-                <h4 class="font-bold text-[11px] text-blue-900 mb-2">تشطيب حمامات</h4>
-                <p class="text-[9px] text-gray-500">تركيب الأدوات الصحية والخلاطات المودرن.</p>
+                <h4 class="font-bold text-[10px] text-blue-900 mb-1 leading-tight">تشطيب حمامات</h4>
+                <p class="text-[8px] text-gray-500">أدوات صحية مودرن.</p>
             </a>
             <a href="leak-detection.html" class="bg-white p-4 rounded-xl text-center reveal active interactive-card block shadow-sm">
                 <i class="fas fa-search-location text-blue-500 text-2xl mb-2"></i>
-                <h4 class="font-bold text-[11px] text-blue-900 mb-2">كشف التسربات</h4>
-                <p class="text-[9px] text-gray-500">فحص إلكتروني بدون تكسير بالرياض.</p>
+                <h4 class="font-bold text-[10px] text-blue-900 mb-1 leading-tight">كشف التسربات</h4>
+                <p class="text-[8px] text-gray-500">فحص بدون تكسير.</p>
             </a>
             <a href="sewer-cleaning.html" class="bg-white p-4 rounded-xl text-center reveal active interactive-card block shadow-sm">
                 <i class="fas fa-water text-blue-500 text-2xl mb-2"></i>
-                <h4 class="font-bold text-[11px] text-blue-900 mb-2">تسليك المجاري</h4>
-                <p class="text-[9px] text-gray-500">حل انسداد البلاعات بأجهزة الضغط.</p>
+                <h4 class="font-bold text-[10px] text-blue-900 mb-1 leading-tight">تسليك المجاري</h4>
+                <p class="text-[8px] text-gray-500">حل انسداد البلاعات.</p>
             </a>
-            <a href="kitchens.html" class="bg-white p-4 rounded-xl text-center reveal active interactive-card block shadow-sm">
+            <a href="kitchen-plumbing.html" class="bg-white p-4 rounded-xl text-center reveal active interactive-card block shadow-sm border-2 border-blue-50">
                 <i class="fas fa-utensils text-blue-500 text-2xl mb-2"></i>
-                <h4 class="font-bold text-[11px] text-blue-900 mb-2">تأسيس المطابخ</h4>
-                <p class="text-[9px] text-gray-500">توزيع هندسي ذكي لشبكة مياه مطبخك.</p>
+                <h4 class="font-bold text-[10px] text-blue-900 mb-1 leading-tight">تأسيس سباكة المطابخ</h4>
+                <p class="text-[8px] text-gray-500">توزيع شبكات التغذية.</p>
             </a>
         </div>
     </section>
 
     <section id="gallery" class="px-5 py-10 bg-slate-50">
         <div class="text-center mb-8 reveal active"><h3 class="text-2xl font-bold text-blue-900">معرض الأعمال</h3></div>
-        <div class="gallery-container reveal active">
+        <div class="gallery-container reveal active max-w-sm mx-auto">
             <div class="slide active"><img src="https://imgg.io/images/2026/02/26/a747b57ed24944a847fa664a240793f3.jpg"></div>
             <div class="slide"><img src="https://imgg.io/images/2026/02/26/7cff351c93a5e02bebcd9e5af13b4d4f.jpg"></div>
             <div class="slide"><img src="https://imgg.io/images/2026/02/26/c622c14d96777d66bb53edb7c5b56613.jpg"></div>
             <div class="slide"><img src="https://imgg.io/images/2026/02/26/9b06d6c4fb64572950172eafc4c44054.jpg"></div>
             <div class="slide"><img src="https://imgg.io/images/2026/02/26/97039ffa091049a0972110f25570f5fe.jpg"></div>
-            <button class="absolute top-1/2 right-2 -translate-y-1/2 bg-black/40 text-white p-2.5 rounded-full z-10 opacity-50" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
-            <button class="absolute top-1/2 left-2 -translate-y-1/2 bg-black/40 text-white p-2.5 rounded-full z-10 opacity-50" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="absolute top-1/2 right-2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full z-10 opacity-50" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+            <button class="absolute top-1/2 left-2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full z-10 opacity-50" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
         </div>
     </section>
 
     <section id="features" class="px-5 py-12">
         <div class="text-center mb-10 reveal active"><h3 class="text-2xl font-bold text-blue-900">لماذا نحن</h3></div>
-        <div class="flex flex-col gap-6 max-w-md mx-auto">
+        <div class="flex flex-col gap-8 max-w-md mx-auto">
             <div class="text-center reveal active px-4">
                 <i class="fas fa-star text-blue-600 text-3xl mb-3"></i>
                 <h4 class="font-bold text-sm text-blue-900 mb-2">جودة أعمالنا</h4>
@@ -136,39 +162,55 @@
             <div class="text-center reveal active px-4">
                 <i class="fas fa-clock text-blue-600 text-3xl mb-3"></i>
                 <h4 class="font-bold text-sm text-blue-900 mb-2">التزامنا بالمواعيد</h4>
-                <p class="text-[10px] text-gray-500 leading-relaxed">سرعة الاستجابة ودقة المواعيد هي سر تميزنا في أحياء شمال الرياض وكافة مناطقها.</p>
+                <p class="text-[10px] text-gray-500 leading-relaxed">سرعة الاستجابة ودقة المواعيد هي سر تميزنا في كافة أحياء الرياض الشمالية والوسطى.</p>
             </div>
         </div>
     </section>
 
-    <div style="display:none;">سباك الرياض، سباك شمال الرياض، حي النفل، حي المصيف، تأسيس فيلا، تسليك بلاعات، كشف تسربات المياه.</div>
+    <div style="display:none;">سباك الرياض، سباك شمال الرياض، حي النفل، حي المصيف، تأسيس فيلا، تسليك بلاعات، كشف تسربات المياه، تأسيس سباكة المطابخ بالرياض.</div>
 
-    <footer class="bg-white pt-8 pb-12 text-center border-t">
-        <p class="text-[9px] text-gray-400">جميع الحقوق محفوظة &copy; 2024 | الوليد للسباكة بالرياض</p>
-        <p class="text-blue-500 font-bold text-[9px] mt-1">تم التصميم بواسطة المهندس إسلام الشيخ</p>
+    <footer class="bg-white pt-10 pb-12 text-center border-t">
+        <div class="font-bold text-blue-900 mb-4 leading-none">الوليد لخدمات السباكة بالرياض</div>
+        <p class="text-[9px] text-gray-400 mb-6">جميع الحقوق محفوظة &copy; 2024</p>
+        
+        <a href="https://wa.me/966510721671" class="designer-signature">
+            تم التصميم بواسطة المهندس إسلام الشيخ
+        </a>
     </footer>
 
-    <a href="https://wa.me/966510721671" class="fixed bottom-20 left-4 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-lg z-50 animate-bounce"><i class="fab fa-whatsapp"></i></a>
     <nav class="fixed bottom-0 w-full bg-white border-t border-gray-200 flex justify-around items-center py-2.5 z-50 text-[10px] font-bold pb-4 shadow-lg">
         <a href="#" class="flex flex-col items-center gap-1 text-blue-600"><i class="fas fa-home text-xl"></i> الرئيسية</a>
         <a href="#services" class="flex flex-col items-center gap-1 text-gray-400"><i class="fas fa-tools text-xl"></i> خدماتنا</a>
         <a href="#gallery" class="flex flex-col items-center gap-1 text-gray-400"><i class="fas fa-images text-xl"></i> أعمالنا</a>
-        <a href="#features" class="flex flex-col items-center gap-1 text-gray-400"><i class="fas fa-shield-alt text-xl"></i> لماذا نحن</a>
+        <a href="https://wa.me/966510721671" class="flex flex-col items-center gap-1 text-green-600"><i class="fab fa-whatsapp text-xl"></i> اطلب سباك</a>
     </nav>
 
+    <a href="https://wa.me/966510721671" class="fixed bottom-20 left-4 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-lg z-50 animate-bounce"><i class="fab fa-whatsapp"></i></a>
+
     <script>
+        // شاشة التحميل
         window.addEventListener('load', function() {
             setTimeout(function() { 
                 document.getElementById('splash-screen').style.opacity = '0'; 
                 setTimeout(() => document.getElementById('splash-screen').style.display='none', 600); 
             }, 2500);
         });
+
+        // معرض الأعمال
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
-        function showSlide(n) { slides[currentSlide].classList.remove('active'); currentSlide = (n + slides.length) % slides.length; slides[currentSlide].classList.add('active'); }
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
         function changeSlide(n) { showSlide(currentSlide + n); }
         setInterval(() => changeSlide(1), 2000);
-        function reveal() { document.querySelectorAll(".reveal").forEach(el => { if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add("active"); }); }
+
+        // تأثير الظهور عند التمرير
+        function reveal() {
+            document.querySelectorAll(".reveal").forEach(el => { if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add("active"); });
+        }
         window.addEventListener("scroll", reveal);
         reveal();
     </script>
