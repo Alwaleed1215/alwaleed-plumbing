@@ -3,32 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>من نحن | الوليد لخدمات السباكة بالرياض</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>من نحن | وليد للسباكة بالرياض</title>
+    
+    <link rel="icon" type="image/png" href="https://imgg.io/images/2026/03/04/37cf7ed3f99a184918a6d691b490847c.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Almarai:wght@700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Cairo', sans-serif; background-color: #f8fafc; overflow-x: hidden; scroll-behavior: smooth; }
+        
+        /* التوقيع الملكي المطور للمهندس/ إسلام الشيخ */
+        .royal-signature {
+            color: #d4af37; border: 2px solid #d4af37; padding: 8px 20px; border-radius: 15px; font-size: 11px; font-weight: 900; text-decoration: none; 
+            display: inline-flex; align-items: center; gap: 6px; position: relative; overflow: hidden;
+            background: linear-gradient(90deg, #d4af37, #f3e5ab, #d4af37); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            animation: shine 2.5s linear infinite; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4); transition: all 0.3s ease;
+        }
+        @keyframes shine { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
+
+        /* الهيدر والاسم */
+        .site-title { font-family: 'Almarai', sans-serif; color: #4dabf7; font-size: 14px; font-weight: 800; }
+        @keyframes logo-pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+        .header-logo-animate { animation: logo-pulse 3s infinite ease-in-out; }
+
+        /* البار السفلي النحيف */
+        .floating-nav {
+            position: fixed; bottom: 15px; left: 50%; transform: translateX(-50%); width: 92%; max-width: 450px;
+            background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px);
+            border-radius: 20px; border: 2px solid #1e3a8a; box-shadow: 0 8px 25px rgba(30, 58, 138, 0.2);
+            display: flex; justify-content: space-around; align-items: center; z-index: 1000; padding: 8px 5px;
+        }
+        .nav-item { display: flex; flex-direction: column; align-items: center; gap: 2px; color: #64748b; font-size: 9px; font-weight: 800; transition: all 0.3s ease; text-decoration: none; }
+        .nav-item i { font-size: 16px; }
+        .nav-active { color: #1e3a8a !important; }
+
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .info-card { background: white; border-radius: 25px; border: 1.5px solid #e2e8f0; transition: all 0.3s ease; }
+        
+        /* تنسيق الخريطة */
+        .map-container { position: relative; width: 100%; padding-bottom: 75%; height: 0; overflow: hidden; border-radius: 15px; border: 3px solid #1e3a8a; }
+        .map-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        .footer-blue { background-color: #1e3a8a; border-top: 4px solid #5eead4; }
+        .silver-text { color: #e2e8f0; text-shadow: 0 0 10px rgba(255, 255, 255, 0.4); }
+    </style>
 </head>
-<body class="bg-slate-50 text-center pb-32">
-    <header class="bg-white py-5 px-6 border-b flex items-center justify-between">
-        <a href="index.html" class="text-blue-900 font-bold"><i class="fas fa-arrow-right ml-2"></i> العودة</a>
-        <div class="font-bold text-blue-900">من نحن</div>
+<body class="pb-32 text-center">
+
+    <header class="bg-white/95 fixed top-0 w-full z-40 py-3 px-5 shadow-sm border-b flex items-center justify-start">
+        <a href="index.html" class="flex items-center gap-3 no-underline">
+            <div class="w-9 h-9 bg-blue-50 rounded-full flex items-center justify-center header-logo-animate shadow-sm overflow-hidden border border-blue-100 p-1">
+                <img src="https://imgg.io/images/2026/03/04/37cf7ed3f99a184918a6d691b490847c.png" alt="شعار" class="w-full h-full object-contain">
+            </div>
+            <div class="site-title italic">وليد للسباكة بالرياض</div>
+        </a>
     </header>
 
-    <section class="py-12 px-6">
-        <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl shadow-lg"><i class="fas fa-briefcase"></i></div>
-        <h1 class="text-2xl font-bold text-blue-900 mb-6">مؤسسة الوليد لخدمات السباكة</h1>
-        <p class="text-xs text-gray-600 leading-8 px-4 mb-8">نحن كيان وطني رائد متخصص في تقديم الحلول الهندسية المتكاملة في قطاع السباكة والصرف الصحي داخل مدينة الرياض. تأسست المؤسسة برؤية تهدف لتغيير مفهوم الصيانة التقليدي عبر دمج التقنيات الحديثة مع الخبرة البشرية العميقة لضمان أعلى مستويات الأمان والجودة للمباني السكنية والتجارية.</p>
-        
-        <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 max-w-sm mx-auto mb-8">
-            <h2 class="font-bold text-blue-900 mb-4 border-b pb-2">بيانات التواصل</h2>
-            <div class="flex flex-col gap-5">
-                <div class="flex items-center gap-3 text-right"><i class="fas fa-map-marker-alt text-blue-500"></i><span class="text-[11px] text-gray-500">الرياض، المملكة العربية السعودية - نخدم كافة الأحياء.</span></div>
-                <div class="flex items-center gap-3 text-right"><i class="fas fa-phone-alt text-blue-500"></i><span class="text-[11px] text-gray-500">0510721671</span></div>
-                <div class="flex items-center gap-3 text-right"><i class="fas fa-clock text-blue-500"></i><span class="text-[11px] text-gray-500">نعمل على مدار 24 ساعة لخدمتكم.</span></div>
+    <section class="relative pt-28 pb-16 px-6 bg-blue-900 text-white shadow-inner">
+        <div class="reveal active">
+            <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl overflow-hidden p-2">
+                <img src="https://imgg.io/images/2026/03/04/37cf7ed3f99a184918a6d691b490847c.png" alt="شعار وليد للسباكة" class="w-full h-full object-contain">
+            </div>
+            <h1 class="text-3xl font-black mb-4 leading-tight">وليد للسباكة</h1>
+            <p class="text-[11px] text-blue-100 leading-relaxed px-4 opacity-90">حلول هندسية ذكية تضمن جودة وأمان المباني.</p>
+        </div>
+    </section>
+
+    <section class="px-6 py-12">
+        <div class="max-w-md mx-auto reveal active">
+            <div class="info-card p-8 mb-8 shadow-sm">
+                <h2 class="text-xl font-bold text-blue-900 mb-4 border-b-2 border-blue-500 pb-2 inline-block">خبير السباكة بالرياض</h2>
+                <p class="text-[12px] text-gray-600 leading-8 text-justify font-semibold">
+                    خبير السباكة والصرف الصحي بالرياض.. أعيد صياغة مفهوم الصيانة من خلال دمج التقنيات الذكية بالخبرة الفنية العميقة. متخصص في تقديم حلول هندسية متكاملة تضمن جودة وأمان المباني (السكنية والتجارية). جودة العمل هي بصمتي، ورضاكم هو غايتي.
+                </p>
+            </div>
+
+            <div class="info-card p-8 shadow-sm">
+                <h2 class="text-xl font-bold text-blue-900 mb-6 border-b-2 border-blue-500 pb-2 inline-block">تواصل معنا</h2>
+                <div class="flex flex-col gap-5 text-right mb-8">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-blue-600 shadow-inner"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <p class="text-[10px] text-gray-400 font-bold">رقم التواصل</p>
+                            <p class="text-[13px] text-blue-900 font-black">0510721671</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-blue-600 shadow-inner"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <p class="text-[10px] text-gray-400 font-bold">البريد الإلكتروني</p>
+                            <p class="text-[11px] text-blue-900 font-bold">Info@alwaleed.services</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mb-4">
+                    <p class="text-[11px] text-gray-700 font-bold mb-3 italic"><i class="fas fa-map-marker-alt text-red-500 ml-1"></i> الرياض، المملكة العربية السعودية</p>
+                    <div class="map-container">
+                        <iframe src="https://maps.google.com/maps?q=Riyadh&t=k&z=11&ie=UTF8&iwloc=&output=embed" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <a href="https://wa.me/966510721671" class="bg-green-600 text-white font-bold py-4 px-12 rounded-full shadow-xl inline-block"><i class="fab fa-whatsapp ml-2"></i> تواصل مباشر الآن</a>
     </section>
+
+    <footer class="footer-blue pt-14 pb-12 text-center shadow-inner">
+        <div class="silver-text font-black text-xl mb-4 italic tracking-widest">وليد للسباكة</div>
+        <p class="text-[10px] text-slate-300 mb-10 font-bold">جميع الحقوق محفوظة لدى : وليد للسباكة ٢٠٢٧</p>
+        
+        <a href="https://wa.me/966547194788" class="royal-signature">
+            👑 تم التصميم بواسطة المهندس/ إسلام الشيخ 👑
+        </a>
+    </footer>
+
+    <a href="https://wa.me/966510721671" class="fixed bottom-85 left-20 bg-[#25d366] text-white width-[45px] height-[45px] border-radius-[50%] flex items-center justify-center font-size-[22px] shadow-[0_4px_12px_rgba(0,0,0,0.2)] z-[999]" style="position: fixed; bottom: 85px; left: 20px; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; animation: bounce 2s infinite;"><i class="fab fa-whatsapp"></i></a>
+
+    <nav class="floating-nav">
+        <a href="index.html" class="nav-item"><i class="fas fa-home"></i>الرئيسية</a>
+        <a href="index.html#services" class="nav-item"><i class="fas fa-tools"></i>خدماتنا</a>
+        <a href="index.html#gallery-section" class="nav-item"><i class="fas fa-images"></i>أعمالنا</a>
+        <a href="#" class="nav-item nav-active"><i class="fas fa-id-card text-blue-900"></i>من نحن</a>
+    </nav>
+
+    <script>
+        function reveal() {
+            document.querySelectorAll(".reveal").forEach(el => { if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add("active"); });
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
 </body>
 </html>
